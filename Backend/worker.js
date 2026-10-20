@@ -74,7 +74,8 @@ async function handleApiProxy(request, url) {
 
   // Add User-Agent for LRCLIB
   headers.set('User-Agent', 'LRCGetter/1.0 (https://rukamari.github.io/LRCGetter/)');
-
+  headers.set('Lrclib-App-Id', 'YhRSPItSx00EJ02PB18PvL4oJ5pv0ZB9Z8TeJLzu-E0');
+  
   // Make the proxied request
   const proxyRequest = new Request(targetUrl, {
     method: request.method,
