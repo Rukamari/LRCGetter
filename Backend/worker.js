@@ -24,7 +24,7 @@ export default {
       return new Response(JSON.stringify({
         name: 'LRCGetter Backend',
         description: 'API proxy for LRCLIB to avoid CORS issues',
-        frontend: 'https://htmltoolkit.github.io/LRCGetter/',
+        frontend: 'https://rukamari.github.io/LRCGetter/',
         endpoints: [
           'GET /api/get?track_name=...&artist_name=...&album_name=...&duration=...',
           'GET /api/get-cached?track_name=...&artist_name=...&album_name=...&duration=...',
@@ -73,7 +73,7 @@ async function handleApiProxy(request, url) {
   }
 
   // Add User-Agent for LRCLIB
-  headers.set('User-Agent', 'LRCGetter/1.0 (https://htmltoolkit.github.io/LRCGetter/)');
+  headers.set('User-Agent', 'LRCGetter/1.0 (https://rukamari.github.io/LRCGetter/)');
 
   // Make the proxied request
   const proxyRequest = new Request(targetUrl, {
